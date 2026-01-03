@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的第一个网页</title>
+
+    <!-- 统一引入 style.css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+
+<header class="topbar">
+    <h1>图书馆管理系统</h1>
+    <p>Library Borrowing Management System</p>
+</header>
+
+<main class="container">
+
+    <!-- 图书列表 -->
+    <section class="book-panel">
+        <h2>馆藏图书</h2>
+
+        <ul class="book-list">
+            <li>
+                <span class="book-id">001</span>
+                <span class="book-name">三体</span>
+                <button onclick="borrowBook('三体')">借阅</button>
+            </li>
+
+            <li>
+                <span class="book-id">002</span>
+                <span class="book-name">百年孤独</span>
+                <button onclick="borrowBook('百年孤独')">借阅</button>
+            </li>
+
+            <li>
+                <span class="book-id">003</span>
+                <span class="book-name">活着</span>
+                <button onclick="borrowBook('活着')">借阅</button>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 借阅管理 -->
+    <aside class="borrow-panel">
+        <h2>借阅管理</h2>
+
+        <div class="status-box">
+            <p id="status">暂无借阅记录</p>
+        </div>
+
+        <input id="book-input" placeholder="输入书名">
+        <button id="borrow-btn">借阅</button>
+        <button id="return-btn">归还</button>
+    </aside>
+
+</main>
+
+<script src="./控制文件.js"></script>
+</body>
